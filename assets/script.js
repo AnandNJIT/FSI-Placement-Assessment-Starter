@@ -1,7 +1,7 @@
 // HINT: You can delete this console.log after you no longer need it!
 
 // First, tell us your name
-let yourName = "Anand Patel" // HINT: Replace this with your own name!
+let yourName = " Anand Patel" // HINT: Replace this with your own name!
 
 // We'll use these variables to track the counts of each cookie type
 let gb = 0 // Gingerbread
@@ -9,18 +9,17 @@ let cc = 0 // Chocolate Chip
 let sugar = 0 // Sugar Sprinkle
 
 // selecting the element with an id of credit
-const credit = document.querySelector('#credit')
-// selecting the element with an id of add-gb
-const gbPlusBtn = document.querySelector('#add-gb')
+const credit =  document.querySelector('#credit')
+
 
 // Code to update name display
-credit.textContent = `Created by ${yourName}`
+ credit.textContent =  `Created by ${yourName}`
 
 
 
 // update quantity
 function updateQuantity(displayQuantity) {
-    let quantity = document.querySelector('.qty-gb')
+    let gbPlusBtn = document.querySelector('.qty-gb')
     quantity.innerHTML = displayQuantity 
 }
 
@@ -32,12 +31,14 @@ const gbMinusBtn = document.querySelector('#minus-gb')
 // add event listener to decrease quantity
 gbMinusBtn.addEventListener('click', function(){
     if (quantity > 0) {
-        quantity = quantity - 1;
+        quantity = quantity -  1;
     }
     updateQuantity(`Gingerbread: ${quantity}`)
 })
 
 // add event listener to increase quantity
+const gbPlusBtn = document.querySelector('#add-gb')
+
 gbPlusBtn.addEventListener('click', function(){
     quantity = quantity + 1;
 
@@ -109,6 +110,12 @@ sugarPlusBtn.addEventListener('click', function(){
 
     updateQuantity(`Sugar Sprinkle: ${quantity}`)
 })
+
+
+
+
+
+
 
 
 
